@@ -1,0 +1,148 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    animation: gradientMove 15s ease infinite;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 400px;
+    padding: 40px 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out;
+    transform-origin: center;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.input-box i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 20px;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.input-box input {
+    width: 100%;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 0 25px 0 50px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+.input-box input:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    width: 100%;
+    height: 55px;
+    background: #fff;
+    border: none;
+    border-radius: 25px;
+    color: #e73c7e;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    margin: 25px 0;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.register-link {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.register-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    opacity: 0.9;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
